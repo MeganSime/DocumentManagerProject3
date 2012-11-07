@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<title>Workbook Reports</title>
+<meta name=viewport content="user-scalable=no, width=device-width" />
+<link type=text/css rel=stylesheet media=screen href=jqtouch/jqtouch.css />
+<link type=text.css rel=stylesheet media=screen href=themes/jqt/theme.css />
+<link rel=apple-touch-startup-image href=IDOXlogo.png />
+<script type=text/javascript src=jqtouch/jquery.js></script>
+<script type=text/javascript src=jqtouch/jqtouch.js></script>
+<script type=text/javascript src=save.js></script>
+</head>
+<body>
+<div id=header>
+<div class=toolbar>
+<h1>Workbook Reports</h1>
+<a class="button left slideup" href=#settings rel=icon><img name=setting src=images/settings.png align=right border=0 width=30 height=30 vspace=0 hspace=0></a>
+<a class="button flip" href=#about>About</a>
+</div>
+<ul class=edgetoedge>
+<li class=arrow><a href=#messages>Message Centre</a></li>
+<li class=arrow><a href=#searches>Top Searches</a></li>
+<li class=arrow><a href=#documents>Popular Documents</a></li>
+</ul>
+</div>
+<div id=messages>
+<div class=toolbar>
+<h1>Message Centre</h1>
+<a class="button back" href=#>Main Menu</a>
+</div>
+<ul class=edgetoedge>
+<li class=arrow><a href=#messageboard>Message Board</a></li>
+</ul>
+</div>
+<div id=messageboard>
+<div class=toolbar>
+<h1>Message Board</h1>
+<a class="button back" href=#>Message Centre</a>
+</div>
+<ul class=edgetoedge>
+<li class=arrow><a href=#testmessage rel=thumbnail><img height=20 width=20 src=images/messages.png />Test Message</a></li>
+<li class=arrow><a href=#emailform rel=thumbnail><img height=20 width=20 src=images/messages.png />Send Message</a></li>
+</ul>
+</div>
+<div id=testmessage>
+<div class=toolbar>
+<h1>Test Message</h1>
+<a class="button back" href=#>Message Board</a>
+</div>
+<ul class=rounded>
+<li style=color:#fff;font-weight:normal>To: <br>Megan Sime</li>
+<li style=color:#fff;font-weight:normal>From:<br> User</li>
+<li style=color:#fff;font-weight:normal>Subject:<br> TEST</li><br>
+<li style=color:#fff;font-weight:normal>THIS IS A TEST MESSAGE</li>
+</ul>
+</div>
+<div id=emailform>
+<div class=toolbar>
+<h1>Send a Message</h1>
+<a class="button back" href=#>Message Board</a>
+</div>
+<form id=contacts-form>
+<ul class=rounded>
+<li style=color:#FFFFFF>Full Name:<input type=text placeholder="E. Xample" name=signature id=signature /></li>
+<li style=color:#FFFFFF>E-mail:<input type=text placeholder=www.example@examplemail.com name=address id=address /></li><br>
+<li style=color:#FFFFFF>Message:<input type=text placeholder=Message name=message id=message /></li>
+<a class=button onclick='javascript:window.location="mailto:"+document.getElementById("address").value+"?subject=Message from "+document.getElementById("signature").value+"&body="+document.getElementById("message").value'>Send</a>
+</ul>
+</form>
+</div>
+<div id=searches>
+<div class=toolbar>
+<h1>Top Searches</h1>
+<a class='button back' href=#>Main Menu</a>
+</div>
+<ul class=rounded>
+<li><a href=http://www.google.co.uk/ rel=external style=font-weight:normal;color:white;font-family:Helvetica><img height=20 width=20 src=images/search.png />Google</a></li>
+<li><a href=http://www.bbc.co.uk/ rel=external style=font-weight:normal;color:white;font-family:Helvetica><img height=20 width=20 src=images/search.png />BBC</a></li>
+</ul>
+</div>
+<div id=documents>
+<div class=toolbar>
+<h1>Popular Documents</h1>
+<a class='button back' href=#>Main Menu</a>
+</div>
+<ul class=edgetoedge>
+<li class=arrow><a rel=thumbnail href=#testinfo><img height=20 width=20 src=images/pdfthumb.jpg />Test Document</a></li>
+</ul>
+</div>
+<div id=testinfo>
+<div class=toolbar>
+<h1>Test Document</h1>
+<a class='button back' href=#>Popular Documents</a>
+</div>
+<script language=JavaScript>document.write("<ul class = 'rounded' style = 'color: white; font-weight: normal;'>");document.write("<li>Referring Document: "+document.referrer+"</li>");document.write("<li>Domain: "+document.domain+"</li>");document.write("<li>URL: "+document.URL+"</li>");document.write("</ul>");</script>
+<ul class=rounded style=background-color:#000;text-align:center>
+<a href="Test.pdf#page=1">View Document</a>
+</ul>
+</div>
+<div id=about>
+<div class=toolbar>
+<h1>About</h1>
+<a class='button cancel' href=#>Main Menu</a>
+</div>
+<p>Workbook Reports is a companion for Document Managers on the move. For more information follow us on Twitter;</p><br>
+<a href=http://www.twitter.co.uk style=color:#64fe2e>@idox_workbook_reports</a>
+</div>
+<div id=settings>
+<div class=toolbar>
+<h1>Settings</h1>
+<a class='button cancel' href=#>Main Menu</a>
+</div>
+<form method=post name=MainForm>
+<ul class=rounded>
+<li style=color:#FFFFFF><input type=text placeholder=Name name=name id=name autocapitalize=on autocorrect=off autocomplete=off style="color:#fff;background:transparent url(../.png);border:0;font:normal 17px Helvetica;padding:0;display:inline-block;margin-left:0;width:100%;-webkit-appearance:textarea" /></li>
+<li style=color:#FFFFFF><input type=email placeholder=Email name=email id=email autocapitalize=off autocorrect=off autocomplete=off style="color:#fff;background:transparent url(../.png);border:0;font:normal 17px Helvetica;padding:0;display:inline-block;margin-left:0;width:100%;-webkit-appearance:textarea" /></li>
+<li style=color:#FFFFFF><input type=text maxlength=11 placeholder=Telephone name=telephone id=telephone style="color:#fff;background:transparent url(../.png);border:0;font:normal 17px Helvetica;padding:0;display:inline-block;margin-left:0;width:100%;-webkit-appearance:textarea" /></li><br>
+<li style=color:#fff>Notifications<span class=toggle><input type=checkbox class=notifications name=notifications id=notifications /></span></li>
+<li style=color:#fff>Preview<span class=toggle><input type=checkbox class=preview name=preview id=preview /></span></li>
+<li style=color:#fff>Set Profession</li>
+<select name=job id=job style=width:auto;background-color:#777;color:white;font-size:20px;border-color:#AAA>
+<option value=jobselect>Select Profession</option>
+<option value=job1>Mechanical Engineer</option>
+<option value=job2>Software Engineer</option>
+<option value=jobother>Other</option>
+</select>
+<p style=font-weight:normal;color:white>If you chose 'Other', please specify: <li><input type=text placeholder=Other name=other id=other autocapitalize=on autocorrect=off autocomplete=off style="color:white;background:transparent url(../.png);border:0;font:normal 17px Helvetica;padding:0;display:inline-block;margin-left:0;width:100%;-webkit-appearance:textarea"/></li></p>
+</ul>
+<ul class=rounded style=background-color:#000;text-align:center>
+<input id=save type=submit class=submit name=action value=Save style="width:auto;color:white;background-color:black;border-color:black;font-size:25px"/>
+</ul>
+</form>
+</div>
+</body>
+</html>
