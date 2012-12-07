@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset = 'utf-8'>
+	
+	<title>Document Managers App</title>
+	
+	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
+	<meta name = 'description' content = ''>
+	<meta name = 'author' content = ''>
+	
+	<link href = 'css/bootstrap.css' rel = 'stylesheet'>
+	<link href = 'css/bootstrap-responsive.css' rel = 'stylesheet'>
+	
+	<style>
+		body{
+			background-color: #F7F7F7;
+			font: Arial, 14px, #555;
+			text-shadow: outside 1px down white;
+			line-height: 20px;
+		}
+		.navbar-fixed-top .container {
+			background-color: #009FDA;
+			border: 1px solid; top: #218DF1; left/right: #009FDA; bottom: #109DC1;
+			font: white;
+		}
+		span .icon-bar {
+			background-color: #0077B3;
+			text-shadow: inside 1px down #F7F7F7 outside 1px down 2px blur black(alpha:0.05);
+			border: 1px solid; top/right/left: #0076B2; bottom: #006191;
+			font: white;
+			text-shadow: outside 1px up black;
+		}
+		.btn {
+			background-color: #F5F5F5 -webkit-gradient(top, bottom, from(white) to(#E6E6E6));
+			text-shadow: inside 1px down 1px blur, #F5F5F5;
+			border: 1px solid;
+		}
+		.btn .clicked {
+			background-color: #E6E6E6;
+			text-shadow: inside 2px down 4px blur, black(alpha:0.15) outside 1px down 2px blur;
+			border: 1px solid;
+		}
+		a [href] {
+			color: #009FDA;
+		}
+		a [href]:hover{
+			color: #005590;
+		}
+		h2 {
+			color: #48788B;
+			line-height: 38px;
+			size: 20px;
+			font-weight: bold;
+		}
+		.brand{
+			text-indent: -999px;
+			width: 40px;
+			height: 30px;
+			padding: 0;
+			margin: 5px 0 0 0;
+			background: url(images/IDOXlogo.png) no-repeat center center;
+		}
+		footer{
+			padding: 20px;
+			margin-top: 30px;
+			@include border-radius (10px 10px 0 0);
+			color: #000;
+		}
+	</style>	
+	
+</head>
+<body>
+
+<div class = 'navbar navbar-fixed-top'>
+	<div class = 'navbar-inner'>
+		<div class = 'container'>
+		
+			<a class = 'btn btn-navbar' data-toggle = 'collapse' data-target = '.nav-collapse'>
+				<span class = 'icon-bar'></span>
+				<span class = 'icon-bar'></span>
+				<span class = 'icon-bar'></span>
+			</a>
+			<a class = 'brand' href = 'index.html'>Document Managers App</a>
+			
+				<div class = 'nav-collapse'>
+				
+					<ul class = 'nav'>
+						<li><a href = 'index.html'>Home</a></li>
+						<li><a href = 'about.html'>About</a></li>
+						<li><a href = 'settings.html' rel = 'icon'><img name = 'setting' src = 'images/settings.png' border = '0' width = '30' height = '30' vspace = '0' hspace = '0'></a></li>
+					</ul>
+					
+				</div>
+		</div>
+	</div>
+</div>
+<div class = 'container'>
+	<div class = 'hero-unit'>
+	
+		<h2>Messages</h2>
+		
+		<ul class='nav'>
+			<li><a href='testmessage.html' rel='thumbnail'><img height='20' width='20' src='images/messages.png' />Test Message</a></li>
+			<li><a href='emailform.html' rel='thumbnail'><img height='20' width='20' src='images/messages.png' />Send Message</a></li>
+		</ul>
+		
+	 </div>
+	 
+	 	<hr>
+	 	
+	 	<footer>
+	 	
+	 		<p>&copy; IDOX Group 2012</p>
+	 		
+	 	</footer>
+	 	
+</div>
+
+	<script src = 'js/bootstrap.js'></script>
+	<script src = 'js/jquery.min.js'></script>
+	 	
+</body>
+</html>
