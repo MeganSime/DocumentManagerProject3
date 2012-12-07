@@ -1,4 +1,4 @@
-function loadSettings(){	
+function loadSettings(){
 	$("#name").val(localStorage.name);
 	$("#email").val(localStorage.email);
 	$("#telephone").val(localStorage.telephone);
@@ -10,10 +10,7 @@ function saveSettings(){
 	localStorage.email = $("#email").val();
 	localStorage.telephone = $("#telephone").val();
 	localStorage.other = $("#other").val();
-	
-	return false;
 }
-
 document.addEventListener("DOMContentLoaded",function(){
 	var t = document.getElementById("job");
 	if (localStorage["job"]) {
@@ -23,7 +20,6 @@ document.addEventListener("DOMContentLoaded",function(){
 		localStorage["job"] = this.value
 	}
 });
-
 document.addEventListener("DOMContentLoaded", function() {
 	$.jStorage.set("notifications",$(".notifications").prop("checked")).value;
 	$(".notifications").prop("checked",$.jStorage.get("notifications").value)
@@ -33,7 +29,10 @@ $(document).ready( function() {
 	$('settings.html form[name = "MainForm"]').submit(saveSettings);
 	$("settings.html").bind("pageAnimationStart",loadSettings)
 });
-
+$(document).ready( function() {
+	$('form[name = "MainForm"]').submit(saveSettings);
+	loadSettings();
+});
 $( function() {
 	function t(e){$(e).attr("checked",true);
 		$(e).css("left","0")
